@@ -23,17 +23,14 @@
 ## 演示
 + 演示视频见display_material文件夹内
 + 演示图片：
-![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/1.png))
-![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/2.png))
-![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/3.png))
-![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/4.png))
-![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/5.png))
-![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/6.png))
-![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/7.png))
-![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/8.png))
-
-
-
+![image](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/1.png)
+![image](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/2.png)
+![image](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/3.png)
+![image](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/4.png)
+![image](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/5.png)
+![image](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/6.png)
+![image](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/7.png)
+![image](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/8.png)
 
 
 
