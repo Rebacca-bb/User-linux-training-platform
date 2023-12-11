@@ -20,7 +20,8 @@
  
 ## 其它部署操作都同若依前后端分离版本的要求相同，由于这部分是项目完成后好久才写的，可能会有一些其它的需要根据具体情况修改的地方。
 
-
+## 部分演示图片
+![image](https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png)
 
 
 
