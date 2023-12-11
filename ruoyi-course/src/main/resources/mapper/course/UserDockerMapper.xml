@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.course.mapper.UserDockerMapper">
+    
+    <resultMap type="UserDocker" id="UserDockerResult">
+        <result property="id"    column="id"    />
+        <result property="userName"    column="user_name"    />
+        <result property="containerId"    column="container_id"    />
+        <result property="mappingPort"    column="mapping_port"    />
+        <result property="status"    column="status"    />
+    </resultMap>
+
+    <sql id="selectUserDockerVo">
+        select id, user_name, container_id, mapping_port, status from user_docker
+    </sql>
+
+    <select id="selectUserDockerList" parameterType="UserDocker" resultMap="UserDockerResult">
+        <include refid="selectUserDockerVo"/>
+        <where>  
+            <if test="userName != null  and userName != ''"> and user_name like concat('%', #{userName}, '%')</if>
+            <if test="containerId != null  and containerId != ''"> and container_id = #{containerId}</if>
+            <if test="mappingPort != null "> and mapping_port = #{mappingPort}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+    
+    <select id="selectUserDockerById" parameterType="Long" resultMap="UserDockerResult">
+        <include refid="selectUserDockerVo"/>
+        where id = #{id}
+    </select>
+        
+    <insert id="insertUserDocker" parameterType="UserDocker" useGeneratedKeys="true" keyProperty="id">
+        insert into user_docker
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="userName != null">user_name,</if>
+            <if test="containerId != null">container_id,</if>
+            <if test="mappingPort != null">mapping_port,</if>
+            <if test="status != null">status,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="userName != null">#{userName},</if>
+            <if test="containerId != null">#{containerId},</if>
+            <if test="mappingPort != null">#{mappingPort},</if>
+            <if test="status != null">#{status},</if>
+         </trim>
+    </insert>
+
+    <update id="updateUserDocker" parameterType="UserDocker">
+        update user_docker
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="userName != null">user_name = #{userName},</if>
+            <if test="containerId != null">container_id = #{containerId},</if>
+            <if test="mappingPort != null">mapping_port = #{mappingPort},</if>
+            <if test="status != null">status = #{status},</if>
+        </trim>
+        where id = #{id}
+    </update>
+
+    <delete id="deleteUserDockerById" parameterType="Long">
+        delete from user_docker where id = #{id}
+    </delete>
+
+    <delete id="deleteUserDockerByIds" parameterType="String">
+        delete from user_docker where id in 
+        <foreach item="id" collection="array" open="(" separator="," close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

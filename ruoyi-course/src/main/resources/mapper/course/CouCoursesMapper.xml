@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ruoyi.course.mapper.CouCoursesMapper">
+    
+    <resultMap type="CouCourses" id="CouCoursesResult">
+        <result property="courseId"    column="course_id"    />
+        <result property="courseName"    column="course_name"    />
+        <result property="courseInfo"    column="course_info"    />
+        <result property="courseTypeid"    column="course_typeID"    />
+        <result property="courseSource"    column="course_source"    />
+        <result property="status"    column="status"    />
+        <result property="delFlag"    column="del_flag"    />
+        <result property="createBy"    column="create_by"    />
+        <result property="createTime"    column="create_time"    />
+        <result property="updateBy"    column="update_by"    />
+        <result property="updateTime"    column="update_time"    />
+        <result property="remark"    column="remark"    />
+    </resultMap>
+
+    <sql id="selectCouCoursesVo">
+        select course_id, course_name, course_info, course_typeID, course_source, status, del_flag, create_by, create_time, update_by, update_time, remark from cou_courses
+    </sql>
+
+    <select id="selectCouCoursesList" parameterType="CouCourses" resultMap="CouCoursesResult">
+        <include refid="selectCouCoursesVo"/>
+        <where>  
+            <if test="courseName != null  and courseName != ''"> and course_name like concat('%', #{courseName}, '%')</if>
+            <if test="courseInfo != null  and courseInfo != ''"> and course_info = #{courseInfo}</if>
+            <if test="courseTypeid != null "> and course_typeID = #{courseTypeid}</if>
+            <if test="courseSource != null  and courseSource != ''"> and course_source = #{courseSource}</if>
+            <if test="status != null  and status != ''"> and status = #{status}</if>
+        </where>
+    </select>
+    
+    <select id="selectCouCoursesByCourseId" parameterType="Long" resultMap="CouCoursesResult">
+        <include refid="selectCouCoursesVo"/>
+        where course_id = #{courseId}
+    </select>
+        
+    <insert id="insertCouCourses" parameterType="CouCourses" useGeneratedKeys="true" keyProperty="courseId">
+        insert into cou_courses
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="courseName != null and courseName != ''">course_name,</if>
+            <if test="courseInfo != null and courseInfo != ''">course_info,</if>
+            <if test="courseTypeid != null">course_typeID,</if>
+            <if test="courseSource != null">course_source,</if>
+            <if test="status != null">status,</if>
+            <if test="delFlag != null">del_flag,</if>
+            <if test="createBy != null">create_by,</if>
+            <if test="createTime != null">create_time,</if>
+            <if test="updateBy != null">update_by,</if>
+            <if test="updateTime != null">update_time,</if>
+            <if test="remark != null">remark,</if>
+         </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="courseName != null and courseName != ''">#{courseName},</if>
+            <if test="courseInfo != null and courseInfo != ''">#{courseInfo},</if>
+            <if test="courseTypeid != null">#{courseTypeid},</if>
+            <if test="courseSource != null">#{courseSource},</if>
+            <if test="status != null">#{status},</if>
+            <if test="delFlag != null">#{delFlag},</if>
+            <if test="createBy != null">#{createBy},</if>
+            <if test="createTime != null">#{createTime},</if>
+            <if test="updateBy != null">#{updateBy},</if>
+            <if test="updateTime != null">#{updateTime},</if>
+            <if test="remark != null">#{remark},</if>
+         </trim>
+    </insert>
+
+    <update id="updateCouCourses" parameterType="CouCourses">
+        update cou_courses
+        <trim prefix="SET" suffixOverrides=",">
+            <if test="courseName != null and courseName != ''">course_name = #{courseName},</if>
+            <if test="courseInfo != null and courseInfo != ''">course_info = #{courseInfo},</if>
+            <if test="courseTypeid != null">course_typeID = #{courseTypeid},</if>
+            <if test="courseSource != null">course_source = #{courseSource},</if>
+            <if test="status != null">status = #{status},</if>
+            <if test="delFlag != null">del_flag = #{delFlag},</if>
+            <if test="createBy != null">create_by = #{createBy},</if>
+            <if test="createTime != null">create_time = #{createTime},</if>
+            <if test="updateBy != null">update_by = #{updateBy},</if>
+            <if test="updateTime != null">update_time = #{updateTime},</if>
+            <if test="remark != null">remark = #{remark},</if>
+        </trim>
+        where course_id = #{courseId}
+    </update>
+
+    <delete id="deleteCouCoursesByCourseId" parameterType="Long">
+        delete from cou_courses where course_id = #{courseId}
+    </delete>
+
+    <delete id="deleteCouCoursesByCourseIds" parameterType="String">
+        delete from cou_courses where course_id in 
+        <foreach item="courseId" collection="array" open="(" separator="," close=")">
+            #{courseId}
+        </foreach>
+    </delete>
+</mapper>
