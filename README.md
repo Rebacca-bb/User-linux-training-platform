@@ -20,8 +20,17 @@
  
 ## 其它部署操作都同若依前后端分离版本的要求相同，由于这部分是项目完成后好久才写的，可能会有一些其它的需要根据具体情况修改的地方。
 
-## 部分演示图片
-![image](https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png)
+## 演示
++ 演示视频见display_material文件夹内
++ 演示图片：
+![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/1.png))
+![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/2.png))
+![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/3.png))
+![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/4.png))
+![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/5.png))
+![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/6.png))
+![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/7.png))
+![image]([https://github.com/Rebacca-bb/User-linux-training-platform/display_material/1.png](https://github.com/Rebacca-bb/User-linux-training-platform/blob/main/display_material/8.png))
 
 
 
